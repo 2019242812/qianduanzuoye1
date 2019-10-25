@@ -1,0 +1,83 @@
+body{
+    background-image:url(header_bg.jpg);
+    background-size:1500px 1200px ;
+    overflow-y: scroll;
+}
+.headright{
+    color: white;
+    font-size: 30px;
+    margin-left: 500px;
+    margin-top: 80px;
+}
+button{
+    width: 200px;
+    background-color: aqua;
+    color: white;
+    border: 0 transparent;
+    font-size: 30px;
+    border-radius :10px;
+}
+.headright a{
+    margin-left: 70px;
+}
+.headleft{
+    float: left;
+    margin-left: 300px;
+    margin-top: -30px;
+}
+.dazi{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    font-size: 40px;
+    color: white;
+}
+.xiaozi{
+    font-size: 20px;
+    color: white;
+    margin-left: 340px;
+    margin-top: 20px;
+}
+.anniu{
+    margin-top: 20px;
+    border-radius :10px;
+}
+.lastleft{
+    width: 250px;
+    height: 400px;
+    background-color: white;
+    margin-top: 150px;
+    margin-left: 200px;
+    border: solid 2px wheat;
+    border-radius :10px;
+}
+.lastcenter{
+    width: 250px;
+    height: 400px;
+    background-color: white;
+    margin-top: 150px;
+    margin-left: 150px;
+    border: solid 2px wheat;
+    border-radius :10px;
+}
+.lastright{
+    width: 250px;
+    height: 400px;
+    background-color: white;
+    margin-top: 150px;
+    margin-left: 150px;
+    border: solid 2px wheat;
+    border-radius :10px;
+}
+.last {
+   
+    display: flex;
+    flex-wrap: wrap;
+}
+.pickture1{
+    margin-left: 65px;
+    margin-top: 40px;
+}
+span{font-size: 20px;
+margin-left: 66px;}
+ p{ margin-left: 15px;}
