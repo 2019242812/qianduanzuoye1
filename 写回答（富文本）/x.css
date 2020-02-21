@@ -1,0 +1,397 @@
+body{
+    margin: 0;
+    padding: 0;
+    color: #1a1a1a;
+    font-size: 15px;
+    background-color: antiquewhite;
+}
+#head{
+    height: 52px;
+    background-color:#fff;
+    
+}
+#headleft{
+    color: #0084ff;
+    font-size: 30px;
+    text-align: center;
+}
+.headss{
+    color:#8590a6;
+    margin-left: 40px;
+    font-size: 15px;
+    align-items: center;
+}
+#input{
+    width: 326px;
+    height: 34px;
+    margin-left: 35px;
+}
+#headmiddle{
+    background-color: #0084ff;
+    padding: 0 14px;
+    margin-left: 16px;
+    border-color: #0084ff;
+    font-size: 14px;
+    border: 1px solid;
+    width: 57.6px;
+    height: 34px;
+    color: white;
+}
+.heads{
+    margin-left: 220px;
+}
+
+.headmiddle{
+    margin-left: 260px;
+}
+#touxiang{
+float: right;
+margin-top: 11px;
+margin-right: 290px;
+}
+#headmiddles{
+    background-color: #0084ff;
+    padding: 0 14px;
+    margin-left: 16px;
+    border-color: #0084ff;
+    font-size: 14px;
+    border: 1px solid;
+    width: 57.6px;
+    height: 34px;
+    color: white;
+}
+.middle{
+    width: 820px;
+    display: grid;
+    grid-template-columns: 820px;
+  margin-top: 20px;
+   background-color: white;
+   margin-left: 216px;
+}
+
+.img{
+    margin-top: -50px;
+    margin-left: 50px;
+}
+#last{
+    background-color:#fff;
+    height: 207px;
+    display: grid;
+    grid-template-rows: 134px;
+}
+.lasthead{
+    display: flex;
+    justify-content: center;
+}
+.lastheadleft{
+    width: 687px;
+    height: 134px;
+    background-color:#fff;
+}
+.lastheadright{
+    width: 313px;
+    height: 134px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+}
+.a{
+    margin-top: 30px;
+    color: inherit;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    margin-left: 20px;
+}
+.neirong{
+    margin-left: 20px;
+}
+.ll{
+    margin-left: 20px;
+}
+.t{
+    margin-left: 20px;
+   
+}
+.touxiang{
+    display: grid;
+   grid-template-columns: 70px 100px;
+    grid-template-rows: 70px;
+    align-items: center;
+}
+.gs button{
+    border: none;
+    background-color: #fff;
+    font-size: 25px;
+    margin-left: 20px;
+}.neirong{
+    height: 200px;
+}
+.foot{
+    background-color: #8590a6;
+    width: 820px;
+    
+    display: grid;
+    grid-template-rows: 50px ;
+}
+.foothead{
+    display: flex;
+    align-items: center;
+}
+.footheads{
+    font-weight: 600;
+    margin-left: 20px;
+    font-size: 20px;
+}
+.huida{
+    display: grid;
+    
+    grid-template-rows: repeat(auto-fill);
+}
+.last1{
+    color: #0084ff;
+    width: 101.433px;
+    height: 31.6px;
+    background-color:rgba(0, 132,255, .1);
+    border-color: transparent;
+    margin-left: 20px;
+}
+.last2{
+    color: #0084ff;
+    width: 35.6px;
+    height: 31.6px;
+    background-color:rgba(0, 132,255, .1);
+    border-color: transparent;
+    margin-left: 4px;
+   
+}
+.last3{
+    background-color: #fff;
+    border: none;
+    font-size: 14px;
+    margin-left: 14px ;
+    color: #8590a6;
+}
+.last4{
+    background-color: #fff;
+    border: none;
+    font-size: 14px;
+    margin-left: 14px ;
+    color: #8590a6;
+}
+.last5{
+    background-color: #fff;
+    border: none;
+    font-size: 14px;
+    margin-left: 14px ;
+    color: #8590a6;
+}
+.last6{
+    background-color: #fff;
+    border: none;
+    font-size: 14px;
+    margin-left: 14px ;
+    color: #8590a6;
+}
+.first{
+    margin-left: 20px;
+    font-size: 18px;
+}
+.boder{
+    height: 1px;
+    border-bottom: 1px solid #8590a6;
+    margin-top: 15px;
+}
+.anniu{
+    margin-top: 40px;
+}
+.ccc{
+    float: left;
+    margin-left: 20px; 
+}
+.gengduo{
+    border: none;
+    background-color: #fff;
+    color: #0084ff;
+    font-size: 14px;
+}
+.plq{
+    display:grid;
+    grid-template-columns: repeat(1,100%);
+    grid-template-rows: repeat(3,33.3%);
+    border: 2px solid #f6f6f6;
+    width: 654px;
+    margin-left: 20px;
+ } 
+.topleft{
+    font-size: 20px;
+    font-weight: 600;
+    margin-left: 30px;
+}
+.plqhead{
+    height: 50.8px;
+    display: flex;
+    align-items: center;
+}
+.plqlast{
+     display: flex;
+     align-items: center;
+     justify-content: space-around;
+     border-top: 1px solid black;
+}
+.plqlastLeft{
+    width: 478.4px;
+    border: 1px solid black;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: left;
+    border-top:  1px solid white;
+}
+.plqLastRight{
+    background-color: #0084ff;
+    color: #fff;
+    border: none;
+    font-size: 20px;
+}
+.plqmiddle{
+    display: grid;
+    grid-template-columns: repeat(612.4px);
+    grid-template-rows: repeat(auto-fill);
+    border-top: 1px solid black;
+}
+li div{
+    margin-top: 10px;
+}
+
+.imgs{
+    float: left;
+    width: 20px;
+    height: 20px;
+}
+.name{
+   margin-right: 530px;
+  
+}
+.wenzis{
+    margin-right: 530px;
+}
+.xxxx{
+    margin-right: 530px;
+ 
+    
+}
+.plqmiddles{
+    list-style: none;
+} 
+.sheng{
+    background-color: #0084ff;
+    color: white;
+}
+.cai{
+    
+    color: #0084ff;
+}
+.dz{
+    color: pink;
+}
+.xxxx a{
+    margin-left: 10px;
+}
+.itemmiddle{
+    width:  694px; ;
+}
+#over {
+    width: 100%;
+    height: 800px;
+    position: absolute;
+    background-color: rgba(145,152, 159, 0.5);
+}
+
+#over>div {
+     width: 536px;
+    margin: 0 auto;
+    margin-top: 200px;
+    text-align: center;
+    padding: 1px;
+
+    background-color: white;
+    border-radius: 10px;
+
+}
+
+
+#content {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 536px;
+}
+#close {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    
+}
+#over>div>h3 {
+    margin-top: 20px;
+}
+.forms{
+    width: 488px;
+    background-color: #fff;
+}
+.overtext{
+    width: 432px;
+    height: 43px;
+    background-color: #fff;
+}
+.overlast{
+    width: 400px;
+    height: 40px;
+    margin-top: 20px;
+    background-color: #fff;
+    margin-left: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+}
+.overtext{
+    border: none;
+    resize: none;
+    font-size: 24px;
+
+}
+.overtexts{
+    width: 388px;
+    border: none;
+    resize: none;
+    font-size: 18px;
+
+}
+.overfoot{
+    height: 200px;
+}
+.overload{
+    height: 40px;
+    color:red;
+    float: right;
+    margin-top: 10px;
+}
+.overs{
+    background-color:#0084ff;
+    color: #fff;
+    opacity: 5;
+    border: none;
+    padding: 0 16px;
+    font-size: 15px;
+}
+.overbuttons{
+    font-size: 15px;
+    margin-left: 515px;
+    
+    width: 30px;
+    height: 30px;
+}

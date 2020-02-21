@@ -1,0 +1,70 @@
+body{
+    background-image: url(https://static.zhihu.com/heifetz/assets/sign_bg.db29b0fb.png);
+}
+.head{
+    width: 400px;
+    height: 375.6px;
+    margin-top: 50px;
+    margin-left: 620px;
+    background-color: ghostwhite;
+}
+.middle div{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+.kuang{
+    width: 352px;
+    height: 48.8px;
+    font-size: 20px;
+    border: none;
+    background-color: ghostwhite;
+}
+.lest{
+    margin-top:30px;
+    font-size: 50px;
+    color: blue;
+}
+.lest button{
+    font-size: 14px;
+    color:#fff;
+    background-color:#0084ff;
+    width: 352px;
+    height: 36px;
+    border-color: #0084ff;
+    padding: 0;
+}
+label{
+    font-size: 30px;
+    color: black;
+    margin-right: 30px;
+}
+.head div{
+    font-size: 30px;
+    color: black;
+    display: flex;
+    justify-content: center;
+}
+.zihu{
+    width: 128px;
+    height: 81px;
+    margin-left: 50%;
+    margin-top: 20px;}
+hr{
+    color: darkgray;
+    size: 0.5px;
+    margin-top: 0%;
+}
+#erro{
+    color: red;
+    font-size: 15px;
+    padding: 0;
+}
+.head2{
+    text-decoration: none;
+    font-size: 15px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    color:#1a1a1a;
+}
