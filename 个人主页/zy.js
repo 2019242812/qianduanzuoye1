@@ -270,5 +270,7 @@ let clicktw=function(){
        
 }//查找
 headmiddles.addEventListener('click',clicktw,false);
-
+function zl(){
+  window.open('zl.html')
+}
   

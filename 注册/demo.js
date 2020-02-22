@@ -33,6 +33,9 @@ let a=document.getElementsByClassName('head1');
 
 //console.log(form)
 let click=function(){
+  let values=  function(e){
+    return c= e.value
+    }
     //var formdata=new FormData(form);
         var reg = /(?=.*[0-9])(?=.*[a-z])^[0-9A-Za-z]{6,12}$|(?=.*[0-9])(?=.*[A-Z])^[0-9A-Za-z]{6,12}$/;
         var regs=/^[0-9]{10}$/
@@ -56,23 +59,23 @@ else if(reg.test(values(passwords))===false||reg.test(values(password))===false)
       let value=document.getElementsByClassName('kuang')[0].value;
       let valuetwo=document.getElementsByClassName('kuang')[1].value;
       console.log('ss')
-  ajax({
-      url:'',
-      type:'post',
-      data:{
-          username:value,
-          password:valuetwo,
-      },
-      success:function(request){
-          const ajax=JSON.parse(request.responseText)
+ // ajax({
+    //  url:'',
+    //  type:'post',
+     // data:{
+     //     username:value,
+     //     password:valuetwo,
+     // },
+     // success:function(request){
+      //    const ajax=JSON.parse(request.responseText)
         
-      },
-      error:function(){
-        alert('ss')
-      }
+      //},
+     // error:function(){
+       // alert('ss')
+     // }
       
       
-  })
+  //})
    //const request= new XMLHttpRequest()
   // request.open('post',API)
    //request.setRequestHeader()
@@ -82,8 +85,8 @@ else if(reg.test(values(passwords))===false||reg.test(values(password))===false)
 
 
 
-    //let url="Untitled-2.html"
-    //window.location.href=url
+    let url="denglu.html"
+    window.location.href=url
    //}
    
   }

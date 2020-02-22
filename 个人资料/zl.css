@@ -126,7 +126,7 @@ margin-right: 290px;
     width: 1000px;
     display: grid;
     grid-template-columns: 1000px;
-    grid-template-rows: 240px 942px;
+    grid-template-rows: 240px 1060px;
    background-color: white;
    margin-left: 216px;
 }
@@ -187,4 +187,37 @@ margin-right: 290px;
 a{
     text-decoration: none;
     color: #1a1a1a;
+}
+.ui{
+    margin-left: 500px;
+}
+.xz2{
+    width: 158.4px;
+    height: 32px;
+    margin-left: 20px;
+    
+}
+.xz3{
+    width: 158.4px;
+    height: 32px;
+    margin-left: 20px;
+    
+}
+.xz4{
+    width: 158.4px;
+    height: 32px;
+    margin-left: 20px;
+    
+}
+.xz5{
+    width: 158.4px;
+    height: 32px;
+    margin-left: 20px;
+    
+}
+.xz6{
+    width: 158.4px;
+    height: 32px;
+    margin-left: 20px;
+    
 }

@@ -3,6 +3,7 @@ let name=document.getElementsByClassName('name')[0];
 let imgs=document.getElementsByClassName('ims')[0];
 let xifile=document.getElementById('xFile').files[0];
 let fc=document.getElementsByClassName('diaocha')[0];
+
 let shuju=function(data){
   data=data||{};
   data.type=(data.type||"GET").toUpperCase();
@@ -70,16 +71,7 @@ button.addEventListener('click',click,false)
        img.style.width="168px"
        img.style.height="168px"
        console.log(img)
-       shuju({
-         url:"",
-         type:"post",
-         data:{
-           img:img
-         },
-         sucess:function(){
-           //
-         }
-       })
+       
     }
   }//上传图片
   //img.addEventListener('click',upload,false)
@@ -102,5 +94,12 @@ button.addEventListener('click',click,false)
   }
 
 
-  
-  
+  let label=document.getElementsByClassName('label1')[0]
+  let clickname=function(){
+    let xz=document.getElementsByClassName('xz2')[0];
+    let value=xz.value
+    let names=document.getElementById('name')
+    console.log(value)
+    names.innerHTML=value
+  }
+  label.addEventListener('click',clickname,false)

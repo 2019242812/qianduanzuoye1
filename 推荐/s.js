@@ -33,38 +33,41 @@ if(type.toLocaleLowerCase()==="POST"){
 function clickxwz(){
   window.open('xwzs.html')
 }
-let shuju=function(data){
-  data=data||{};
-  data.type=(data.type||"GET").toUpperCase();
-  console.log(data.url)
+function clickxhd(){
+  window.open('xhd.html')
+}//跳转写文章
+//let shuju=function(data){
+  //data=data||{};
+ // data.type=(data.type||"GET").toUpperCase();
+ // console.log(data.url)
   //data.datatype=data.datatype||"json";
   //let datas=formatParams(data.datas)
-  let request=new XMLHttpRequest;
-  if(data.type=="GET"){
-      request.open('GET',data.url,true)
-      request.send(null);
-  }else if(data.type=="POST"){
-  request.open("post",data.url,true);
-   request.setRequestHeader('Content-type',"application/x-www-form-urlencoded");
-   request.send(data.data);
-}
+ // let request=new XMLHttpRequest;
+ // if(data.type=="GET"){
+  //    request.open('GET',data.url,true)
+ //     request.send(null);
+ // }else if(data.type=="POST"){
+ // request.open("post",data.url,true);
+ //  request.setRequestHeader('Content-type',"application/x-www-form-urlencoded");
+ //  request.send(data.data);
+//}
 //setTimeout(function(){
 //    if(xhr.readySate!=4){
 //        xhr.abort();
  //   }
 //},options.timeout)
-request.onreadystatechange=function(){
-  if(request.readyState==4){
-      var status=request.status;
-      if(status>=200&&status<300||status==304){
-        data.success()
-      }
-      else{
-          data.error()
-      }
-  }
+//request.onreadystatechange=function(){
+ // if(request.readyState==4){
+  //    var status=request.status;
+  //    if(status>=200&&status<300||status==304){
+   //     data.success()
+    //  }
+    //  else{
+   //       data.error()
+   //   }
+ // }
 
-}
+//}
 //function formatParams(data){
  //   var arr=[];
   //  for(var name in data){
@@ -72,7 +75,7 @@ request.onreadystatechange=function(){
   //  }
   //  arr.push(("v="+Math.random()).replace("."))
 //}
-}//ajax
+//}//ajax
 
 
 
@@ -150,14 +153,14 @@ let obj={
           let pl=document.getElementsByClassName('last3')[i];
           let dz=document.getElementsByClassName('last1')[i];
           let cai=document.getElementsByClassName('last2')[i];
-          let lb=document.getElementsByClassName('cai');
+          let lb=document.getElementsByClassName('plq');
           let css=document.getElementsByClassName('wenzi')[i];
           let cs=document.getElementsByClassName('gengduo')[i];
           let ws=document.getElementsByClassName('ws')[i];
           let sc=document.getElementsByClassName('last5')[i]
          let pls= function(){
            //
-          
+            let div=document.createElement('div');
             pl.removeEventListener('click',pls,false)
             let www=document.getElementsByClassName('www')[i];
             let plqhead=document.createElement('div');
@@ -180,9 +183,10 @@ let obj={
             let hr=document.createElement('hr');
             tx.appendChild(imgs);
             tx.appendChild(name);
-            plqmiddleli.appendChild(tx);
-            plqmiddleli.appendChild(wenzis);
-            plqmiddleli.appendChild(xxxx);
+            div.appendChild(tx);
+            div.appendChild(wenzis);
+            div.appendChild(xxxx);
+            plqmiddleli.appendChild(div)
             plqmiddles.appendChild(plqmiddleli);
             plqmiddle.appendChild(plqmiddles);
             plqhead.appendChild(topleft);
@@ -196,6 +200,7 @@ let obj={
             xxxx.appendChild(dzs);
             xxxx.appendChild(hf);
             xxxx.appendChild(hr);
+            div.classList.add('div');
             plq.classList.add("plq");
             plqhead.classList.add('plqhead');
             topleft.classList.add('topleft');
@@ -212,7 +217,12 @@ let obj={
             plqlastRight.classList.add('plqLastRight');
             dzs.classList.add('dz');
             cais.classList.add('cai'); 
-            hf.classList.add('hf')
+            hf.classList.add('hf');
+            dzs.classList.add("dz"+i);
+            cais.classList.add("cai"+i); 
+            hf.classList.add('hf');
+            hf.classList.add("hf"+i);
+            plqmiddleli.classList.add("plqmiddleli"+i)
             topleft.innerHTML="2条评论"
             imgs.src="https://static.zhihu.com/heifetz/assets/NewYear2020Banner.e5ccc19d.png"
             name.innerHTML='废了来'
@@ -229,6 +239,12 @@ let obj={
               pl.innerHTML="评论"
               pl.addEventListener('click',pls,false)
             }
+            let clace=function(){
+              
+              for(let q=0;q<2;q++){
+                  
+              }
+            }
             if(lb.length!=0){
               for(let j=0;j<lb.length;j++){
                 let zan=document.getElementsByClassName('cai')[j];
@@ -238,40 +254,43 @@ let obj={
                 let clickdzs=function(){
                   zan.removeEventListener('click',clickdzs,false);
                   //点赞数加一；发送请求让数据库关于这个的点赞加一；
-                  zan.innerHTML="赞"
-                  zan.classList.add('sheng')
+                  zan.innerHTML="已踩"
+                  zan.classList.add('shengs')
+                  if(cai.classList[2]=="shengs"){
+                    cai.innerHTML="100赞"
+                  }
                   //ajax({
-                   ajax({
-                     url:'',
-                     type:"post",
-                       data:{
-                         type:"ture"
-                       },
-                       success:function(){
-                        zan.innerHTML="赞"
-                        zan.classList.add('sheng')
-                       }
-                   })
+                  // ajax({
+                  //   url:'',
+                   //  type:"post",
+                   //    data:{
+                     //    type:"ture"
+                    //   },
+                    //   success:function(){
+                    //    zan.innerHTML="赞"
+                    //    zan.classList.add('sheng')
+                    //   }
+                   //})
                      
                       //在页面插入内容 下面有写到
                     
                  // })//新
                   let huifu=function(){
                    //点赞数减一；发送请求让数据库关于这个的点赞减一；
-                   zan.innerHTML="点"
-                   zan.classList.remove('sheng');
+                   zan.innerHTML="踩"
+                  
                   // ajax({
-                    ajax({
-                      url:'',
-                      type:"post",
-                        data:{
-                          type:"false"
-                        },
-                        success:function(){
-                         zan.innerHTML="点"
-                         zan.classList.remove('sheng')
-                        }
-                    })
+                   // ajax({
+                   //   url:'',
+                   //   type:"post",
+                   //     data:{
+                    //      type:"false"
+                    //    },
+                    //    success:function(){
+                    //     zan.innerHTML="点"
+                         zan.classList.remove('shengs')
+                    //    }
+                   // })
                   //})//新
                    zan.addEventListener('click',clickdzs,false);
                   }
@@ -281,32 +300,35 @@ let obj={
                   cai.removeEventListener('click',clickcai,false);
                   //点赞数加一；发送请求让数据库关于这个的点赞加一；
                   cai.innerHTML="101点赞"
-                  cai.classList.add('sheng')
+                  cai.classList.add('shengs')
+                  if(dz.classList[2]=="shengs"){
+                    zan.innerHTML="踩"
+                  }
                   //ajax({
-                   ajax({
-                     url:"",
-                     type:"post",
-                     data:{
-                       type:'false'
-                     },
-                     success:function(){
-                      cai.innerHTML="101点赞"
-                      cai.classList.add('sheng')
-                     }
-                   })
+                  // ajax({
+                   //  url:"",
+                   //  type:"post",
+                   //  data:{
+                   //    type:'false'
+                    // },
+                    // success:function(){
+                    //  cai.innerHTML="101点赞"
+                    //  cai.classList.add('sheng')
+                   //  }
+                  // })
                   //})//新
                   let huifu=function(){
                    //点赞数减一；发送请求让数据库关于这个的点赞减一；
                    cai.innerHTML="100点赞"
-                   cai.classList.remove('sheng');
+                   cai.classList.remove('shengs');
                    //ajax({
-                   ajax({
-                     url:'',
-                     type:"post",
-                     data:{
-                       type:'ture'
-                     }
-                   })
+                  // ajax({
+                  //   url:'',
+                  //   type:"post",
+                  //   data:{
+                   //    type:'ture'
+                  //   }
+                  // })
                     
                   //})//新
                    cai.addEventListener('click',clickcai,false);
@@ -315,19 +337,19 @@ let obj={
                 }//踩
                   cai.addEventListener('click',clickcai,false)
                   zan.addEventListener('click',clickdzs,false)
-                  function clickfb(){
+                  function clickhf(){
                     let value=document.getElementsByClassName('plqlastLeft')[j].innerHTML
                    // ajax({
-                     ajax({
-                       url:"",
-                       type:"post",
-                       data:{
-                         text:value
-                       },
-                       success:function(){
+                  //   ajax({
+                   //    url:"",
+                   //    type:"post",
+                    //   data:{
+                    //     text:value
+                   //    },
+                   //    success:function(){
                          //下面的
-                       }
-                     })
+                   //   }
+                   //  })
                     //})//新
                     //发送数据到后台 再渲染到页面；
                     let plqlastLeftson=plqlastLeft.innerHTML;
@@ -351,8 +373,8 @@ let obj={
             xxxxson.appendChild(hr)
             txson.appendChild(imgsson);
             txson.appendChild(nameson);
-            plqmiddles.appendChild(plqmiddlelison);
-            plqmiddlelison.classList.add('plqmiddleli');
+            div.appendChild(plqmiddlelison);
+            plqmiddlelison.classList.add('plqmiddlelison');
             txson.classList.add('tx');
             imgsson.classList.add('imgs');
             nameson.classList.add('name');
@@ -363,55 +385,87 @@ let obj={
             wenzisson.innerHTML=plqlastLeftson
             dzsson.innerHTML="100点赞"
             caisson.innerHTML="踩"
-            hfson.innerHTML="回复"
+            //hfson.innerHTML="回复"
             plqlastLeftson="1"
-                    alert('ccc')
+                   // alert('ccc')
               }//写评论
+                  let ddd=function(){
+                    fabu.innerHTML="回复"
+                    hf.innerHTML="取消回复"
+                    fabu.removeEventListener('click',clickfb,false);
+                    fabu.addEventListener('click',clickhf,false);
+                    hf.removeEventListener('click',ddd,false)
+                    let huifu=function(){
+                      fabu.innerHTML="发布"
+                      hf.innerHTML="回复"
+                      fabu.removeEventListener('click',clickhf,false)
+                      fabu.addEventListener('click',clickfb,false)
+                      //hf.addEventListener
+                      hf.removeEventListener('click',huifu,false)
+                      hf.addEventListener('click',ddd,false)
+                    }
+                    hf.addEventListener('click',huifu,false)
+                  }
                   
-                  let clickhf=function(){
-                    ajax({
-                      url:'',
-                      type:"post",
-                      data:{
-                       username:'',
-                       beusername:'',
-                       text:""
-                      },
-                      success:function(){
-                            //
-                      }
-                    })
-                    let plqlastLefts=document.createElement('div');
-                    let plqlastRights=document.createElement('button');
-                    let plqs=document.createElement('div');
-                    let www=document.getElementsByClassName('www')[j];
-                    plqs.appendChild(plqlastLefts);
-                    plqs.appendChild(plqlastRights);
-                    www.appendChild(plqs);
-                    plqlastLefts.contentEditable=true;
-                    plqlastLefts.innerHTML="发布"
-                    plqlastRights.innerHTML="发布"
-                    plqlastLefts.classList.add('plqlastLeft');
-                    plqlastRights.classList.add('plqLastRight');
-                    plq.classList.add('plqlast');
-                    console.log(j)
-                    ajax({
-                      url:"",
-                      type:"post",
-                      data:{
-                        username:"",
-                        usernamed:'',
-                        text:""
-                      },
-                      success:function(request){
-                        const json=JSON.parse(request.responseText);
-                       
-                        //在页面插入内容 下面有写到
-                      }
-                    })//新
-                  }//对已有评论进行回复
-    
-                  hf.addEventListener('click',clickfb,false)
+                  
+                  let clickfb=function(){
+                    let value=document.getElementsByClassName('plqlastLeft')[j].innerHTML
+                    // ajax({
+                   //   ajax({
+                    //    url:"",
+                    //    type:"post",
+                     //   data:{
+                     //     text:value
+                    //    },
+                    //    success:function(){
+                          //下面的
+                    //   }
+                    //  })
+                     //})//新
+                     //发送数据到后台 再渲染到页面；
+                     let plqlastLeftson=plqlastLeft.innerHTML;
+                     console.log(j)
+                     let plqmiddlelison=document.createElement('li');
+             let txson=document.createElement('div');
+             let imgsson=document.createElement('img');
+             let nameson=document.createElement('div');
+             let wenzisson=document.createElement('div');
+             let xxxxson=document.createElement('div');
+             let dzsson=document.createElement('a');
+             let caisson=document.createElement('a');
+             let hfson=document.createElement('a');
+             let hr=document.createElement('hr');
+             plqmiddlelison.appendChild(txson);
+             plqmiddlelison.appendChild(wenzisson);
+             plqmiddlelison.appendChild(xxxxson);
+             xxxxson.appendChild(caisson);
+             xxxxson.appendChild(dzsson);
+             xxxxson.appendChild(hfson)
+             xxxxson.appendChild(hr)
+             txson.appendChild(imgsson);
+             txson.appendChild(nameson);
+             plqmiddleli.appendChild(plqmiddlelison);
+             plqmiddlelison.classList.add('plqmiddleli');
+             txson.classList.add('tx');
+             imgsson.classList.add('imgs');
+             nameson.classList.add('name');
+             wenzisson.classList.add('wenzis');
+             xxxxson.classList.add('xxxx');
+             dzsson.classList.add("dz");
+             caisson.classList.add('cai');
+             hfson.classList.add('hf');
+             imgsson.src="https://static.zhihu.com/heifetz/assets/NewYear2020Banner.e5ccc19d.png"
+             nameson.innerHTML='废了'
+             wenzisson.innerHTML=plqlastLeftson
+             dzsson.innerHTML="100点赞"
+             caisson.innerHTML="踩"
+             hfson.innerHTML="回复"
+             plqlastLeftson="1"
+                    // alert('ccc')
+                     
+                  }
+                
+                  hf.addEventListener('click',ddd,false)
                   fabu.addEventListener('click',clickfb,false)
               }}
               //生成按钮
@@ -422,105 +476,112 @@ let obj={
           let clicksc=function(){
             sc.removeEventListener('click',clicksc,false)
              console.log('huifu')
-            shuju({
-              url:"",
-              type:"post",
-              data:{
-                type:"ture"
-              },
-              success:function(request){
-                const json=JSON.parse(request.responseText);
+          //  shuju({
+           //   url:"",
+           //   type:"post",
+           //   data:{
+           //     type:"ture"
+            //  },
+            //  success:function(request){
+            //    const json=JSON.parse(request.responseText);
                
                 //在页面插入内容 下面有写到
-              }
-            })//新
+           //   }
+          //  })//新
     
            let huifu= function(){
              console.log('HF')
-             alert('sss')
-             ajax({
-              url:"",
-              type:"post",
-              data:{
-                type:"false"
-              },
-              success:function(request){
-                const json=JSON.parse(request.responseText);
+            // alert('sss')
+           //  ajax({
+           //   url:"",
+           //   type:"post",
+           //   data:{
+           //     type:"false"
+           //   },
+           //   success:function(request){
+           //     const json=JSON.parse(request.responseText);
                
                 //在页面插入内容 下面有写到
-              }
-            })//新
+            //  }
+           // })//新
             sc.addEventListener('click',huifu,false)
           }//收藏
         }
           let clickcai=function(){
-            console.log('sss')
+            console.log('ssssss')
               cai.removeEventListener('click',clickcai,false);
               cai.classList.add('sheng');
-              ajax({
-                url:"",
-                type:"post",
-                data:{
-                  type:"ture"
-                },
-                success:function(request){
-                  const json=JSON.parse(request.responseText);
+              if(dz.classList[1]=="sheng"){
+              dz.classList.remove('sheng')
+              }
+            //  ajax({
+            //    url:"",
+             //   type:"post",
+             //   data:{
+             //     type:"ture"
+             //   },
+              //  success:function(request){
+              //    const json=JSON.parse(request.responseText);
                  
                   //在页面插入内容 下面有写到
-                }
-              })//新
+              //  }
+            //  })//新
               let huifu=function(){
-                ajax({
-                  url:"",
-                  type:"post",
-                  data:{
-                    type:"false"
-                  },
-                  success:function(request){
-                    const json=JSON.parse(request.responseText);
+            //    ajax({
+            //      url:"",
+            //      type:"post",
+            //      data:{
+             //       type:"false"
+             //     },
+             //     success:function(request){
+              //      const json=JSON.parse(request.responseText);
                    
                     //在页面插入内容 下面有写到
-                  }
-                })//新
+              //    }
+             //   })//新
                 cai.classList.remove('sheng')
                 cai.addEventListener('click',clickcai,false)
               }
                 cai.addEventListener('click',huifu,false)
-            }//踩
+            }//不赞同
             let clickdz=function(){
               console.log('sss')
-              ajax({
-                url:"",
-                type:"post",
-                data:{
-                  type:"ture"
-                },
-                success:function(request){
-                  const json=JSON.parse(request.responseText);
+           //   ajax({
+           //     url:"",
+            //    type:"post",
+             //   data:{
+              //    type:"ture"
+              //  },
+              //  success:function(request){
+              //    const json=JSON.parse(request.responseText);
                  
                   //在页面插入内容 下面有写到
-                }
-              })//新
+             //   }
+            //  })//新
                 dz.removeEventListener('click',clickdz,false);
                 dz.classList.add('sheng');
+                if(cai.classList[1]=="sheng"){
+                  cai.classList.remove('sheng')
+                }
+               // dz.classList.remove('last1')
                 let huifu=function(){
-                  ajax({
-                    url:"",
-                    type:"post",
-                    data:{
-                      type:"false"
-                    },
-                    success:function(request){
-                      const json=JSON.parse(request.responseText);
+                 // ajax({
+                  //  url:"",
+                  //  type:"post",
+                  //  data:{
+                   //   type:"false"
+                   // },
+                   // success:function(request){
+                   //   const json=JSON.parse(request.responseText);
                      
                       //在页面插入内容 下面有写到
-                    }
-                  })//新
+                  //  }
+                 // })//新
                   dz.classList.remove('sheng')
                   dz.addEventListener('click',clickdz,false)
                 }
                   dz.addEventListener('click',huifu,false)
-              }//赞
+              }//赞同
             sc.addEventListener('click',clicksc,false)
             dz.addEventListener('click',clickdz,false);
             cai.addEventListener('click',clickcai,false);
@@ -533,13 +594,13 @@ let obj={
   let clicktw=function(){
     alert('查找')
     let input=document.getElementById('input');
-    ajax({
-      url:""+input,
-      type:'get',
-      success:function(){
+   // ajax({
+    //  url:""+input,
+    //  type:'get',
+    //  success:function(){
         //
-      }
-    })
+    //  }
+   // })
          
   }//查找
   headmiddles.addEventListener('click',clicktw,false);
@@ -552,6 +613,7 @@ let obj={
   }//点击头像进入个人页面
   touxiang.addEventListener('click',clicktouxiang,false)
   //同用头像
+  
   
   let wenben=document.getElementsByClassName('wenben')[0];
   window.onload=function(){
@@ -612,19 +674,19 @@ let obj={
     console.log('s')
     let names=document.getElementsByClassName('overtext')[0].value;
     let bei=document.getElementsByClassName('overtexts')[0].value;
-    ajax({
-      url:"",
-      type:"get",
-      data:{
-        username:names,
-        password:bei,
-      },
-      success:function(request){
-        const json=JSON.parse(request.responseText);
+    //ajax({
+    //  url:"",
+    //  type:"get",
+    //  data:{
+    //    username:names,
+     //   password:bei,
+     // },
+     // success:function(request){
+      //  const json=JSON.parse(request.responseText);
         //const text
         //在页面插入内容 下面有写到
-      }
-    })
+     // }
+    //})
     click()
   }
   ass.addEventListener('click',click,false)
